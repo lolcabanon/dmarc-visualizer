@@ -67,3 +67,16 @@ Login with the default username of **admin** and the default password of **admin
 ## Screenshot
 
 ![Screenshot of Grafana dashboard](/big_screenshot.png?raw=true)
+
+## Attributions
+
+This is a common effort from a lot of people. I have simply forked and updated a seemingly dead repo (as many others have done).
+
+I tried to list everybody who contributed, but I might have missed some. Feel free to open a PR if you'd like your work to be credited.
+
+-   https://github.com/debricked/dmarc-visualizer for the original work
+-   https://github.com/deeztek/dmarc-visualizer for the readme update
+
+### Unmerged PR's from the original repo
+
+TODO
