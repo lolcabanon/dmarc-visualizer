@@ -6,9 +6,9 @@ datasources:
   access: 'proxy'
   orgId: 1
   url: 'http://elasticsearch:9200'
-  database: '[dmarc_aggregate-]YYYY-MM-DD'
   isDefault: true
   jsonData:
+    index: '[dmarc_aggregate-]YYYY-MM-DD'
     esVersion: 7.17.5
     timeField: 'date_range'
     interval: 'Daily'
@@ -19,9 +19,9 @@ datasources:
   access: 'proxy'
   orgId: 1
   url: 'http://elasticsearch:9200'
-  database: '[dmarc_forensic-]YYYY-MM-DD'
   isDefault: false
   jsonData:
+    index: '[dmarc_forensic-]YYYY-MM-DD'
     esVersion: 7.17.5
     timeField: 'arrival_date'
     interval: 'Daily'
