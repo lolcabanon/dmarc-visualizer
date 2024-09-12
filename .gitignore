@@ -1,5 +1,13 @@
 /files/
 /output_files/
-/parsedmarc/GeoLite2-Country*
+
 /elastic_data/
+
+grafana.ini
+
+/parsedmarc/GeoLite2-Country*
 parsedmarc.ini
+parsedmarc/GeoIP/*
+GeoIP.conf
+
+*.log
