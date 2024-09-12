@@ -6,11 +6,17 @@ Analyse and visualize DMARC results using open-source tools.
 -   [Elasticsearch](https://www.elastic.co/) to store aggregated data.
 -   [Grafana](https://grafana.com/) to visualize the aggregated reports.
 
-See the full blog post with instructions at https://debricked.com/blog/2020/05/14/analyse-and-visualize-dmarc-results-using-open-source-tools/.
+See the full **original** blog post with instructions at https://debricked.com/blog/2020/05/14/analyse-and-visualize-dmarc-results-using-open-source-tools/.
+
+## Updates from the OG repo
+
+-   Updated ES to ??? (not done yet)
+-   Updated Grafana from **8.x to 10.x**
+-   Updated dashboard configs to be compatible with ES and Grafana current versions
 
 ## Pre-requisites
 
-Deeztek dmarc-visualizer requires that you have a fully updated Ubuntu 20.04 Server machine with Docker and Docker Compose. You can easily install docker and docker-compose by following the instructions at [https://github.com/deeztek/deeztek-docker](https://github.com/deeztek/deeztek-docker).
+`dmarc-visualizer` requires that you have a fully updated Ubuntu 20.04 Server machine with Docker and Docker Compose. You can easily install docker and docker-compose by following the instructions at [https://github.com/deeztek/deeztek-docker](https://github.com/deeztek/deeztek-docker).
 
 ## Installation
 
@@ -18,9 +24,9 @@ Change to the /opt directory:
 
 ` cd /opt`
 
-Git clone the Deeztek dmarc-visualizer repository:
+Git clone the `dmarc-visualizer` repository:
 
-`sudo git clone https://github.com/deeztek/dmarc-visualizer.git`
+`sudo git clone https://github.com/lolcabanon/dmarc-visualizer.git`
 
 This will clone the repository and create a dmarc-visualizer directory in the directory you ran the git clone command from.
 
@@ -54,7 +60,7 @@ If you are planning on using Maxmind Geolocation data, you must ensure you have 
 
 `#COPY GeoLite2-Country.mmdb /usr/share/GeoIP/GeoLite2-Country.mmdb`
 
-Start the Deeztek dmarc-visualizer stack:
+Start the `dmarc-visualizer` stack:
 
 `docker-compose up --build -d`
 
@@ -63,6 +69,16 @@ Navigate to the Grafana Dashboard where **IP_ADDRESS** is the IP Address of your
 http://IP_ADDRESS:3000
 
 Login with the default username of **admin** and the default password of **admin**. You will be prompted to change the password upon first succesful login.
+
+## Reverse proxy
+
+### Apache
+
+TODO: Drop my local apache vhost config
+
+### nginx
+
+Please contribute as I dont use nginx.
 
 ## Screenshot
 
@@ -79,4 +95,4 @@ I tried to list everybody who contributed, but I might have missed some. Feel fr
 
 ### Unmerged PR's from the original repo
 
-TODO
+TODO: List PR's from which I copied stuff
